@@ -826,6 +826,7 @@
     </style>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="icon" type="image/png" href="logo.png">
 </head>
 
 <body class="antialiased">
