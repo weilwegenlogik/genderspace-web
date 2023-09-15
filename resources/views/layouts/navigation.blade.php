@@ -15,6 +15,18 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('voice')" :active="request()->routeIs('voice')">
+                        {{ __('Voice Trainer') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('progress')" :active="request()->routeIs('progress')">
+                        {{ __('Progress Tracker') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('community')" :active="request()->routeIs('community')">
+                        {{ __('Community Hub') }}
+                    </x-nav-link>
+                    <x-nav-link-disabled style="color: gray;" :active="request()->routeIs('bot')">
+                        {{ __('Bot') }}
+                    </x-nav-link-disabled>
                 </div>
             </div>
 

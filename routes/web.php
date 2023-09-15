@@ -25,17 +25,28 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/voice', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('voice');
+Route::prefix('voice')->group(function () {
+    Route::get('/overview', function () {
+        return view('voice.voice');
+    })->name('voice');
+
+    Route::get('/training/words', function () {
+        return view('voice.training.words');
+    })->name('voice.training.words');
+});
+
 
 Route::get('/community', function () {
-    return view('dashboard');
+    return view('community');
 })->middleware(['auth'])->name('community');
 
 Route::get('/progress', function () {
-    return view('dashboard');
+    return view('progress');
 })->middleware(['auth'])->name('progress');
+
+Route::get('/bot', function () {
+    return view('bot');
+})->middleware(['auth'])->name('bot');
 
 Route::get('/admin', function () {
     return view('admin');
