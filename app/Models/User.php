@@ -67,4 +67,11 @@ class User extends Authenticatable
         'public_flags' => 'integer',
         'roles' => 'json',
     ];
+
+    public function unsubscribedMessages()
+    {
+        return $this->belongsToMany(GlobalMessage::class, 'global_message_user', 'user_id', 'global_message_id');
+    }
+    
+
 }

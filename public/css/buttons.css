@@ -1,0 +1,123 @@
+/* Blue Button Color Styles */
+.custom-blue-button {
+    background-color: #3490dc; /* Blue background color */
+    color: #ffffff; /* White text color */
+    border: 1px solid #3490dc; /* Blue border color */
+}
+
+.custom-blue-button:hover {
+    background-color: #2779bd; /* Darker blue on hover */
+}
+
+/* Green Button Color Styles */
+.custom-green-button {
+    background-color: #38c172; /* Green background color */
+    color: #ffffff; /* White text color */
+    border: 1px solid #38c172; /* Green border color */
+}
+
+.custom-green-button:hover {
+    background-color: #2f9e5f; /* Darker green on hover */
+}
+
+/* Red Button Color Styles */
+.custom-red-button {
+    background-color: #e3342f; /* Red background color */
+    color: #ffffff; /* White text color */
+    border: 1px solid #e3342f; /* Red border color */
+}
+
+.custom-red-button:hover {
+    background-color: #cc1f1a; /* Darker red on hover */
+}
+
+/* Yellow Button Color Styles */
+.custom-yellow-button {
+    background-color: #f6993f; /* Yellow background color */
+    color: #ffffff; /* White text color */
+    border: 1px solid #f6993f; /* Yellow border color */
+}
+
+.custom-yellow-button:hover {
+    background-color: #da851f; /* Darker yellow on hover */
+}
+
+/* Purple Button Color Styles */
+.custom-purple-button {
+    background-color: #9561e2; /* Purple background color */
+    color: #ffffff; /* White text color */
+    border: 1px solid #9561e2; /* Purple border color */
+}
+
+.custom-purple-button:hover {
+    background-color: #7e4cae; /* Darker purple on hover */
+}
+
+/* Teal Button Color Styles */
+.custom-teal-button {
+    background-color: #4dc0b5; /* Teal background color */
+    color: #ffffff; /* White text color */
+    border: 1px solid #4dc0b5; /* Teal border color */
+}
+
+.custom-teal-button:hover {
+    background-color: #38a89d; /* Darker teal on hover */
+}
+
+/* Orange Button Color Styles */
+.custom-orange-button {
+    background-color: #f6993f; /* Orange background color */
+    color: #ffffff; /* White text color */
+    border: 1px solid #f6993f; /* Orange border color */
+}
+
+.custom-orange-button:hover {
+    background-color: #da851f; /* Darker orange on hover */
+}
+
+/* Pink Button Color Styles */
+.custom-pink-button {
+    background-color: #f06595; /* Pink background color */
+    color: #ffffff; /* White text color */
+    border: 1px solid #f06595; /* Pink border color */
+}
+
+.custom-pink-button:hover {
+    background-color: #df4c7d; /* Darker pink on hover */
+}
+
+/* Gray Button Color Styles */
+.custom-gray-button {
+    background-color: #718096; /* Gray background color */
+    color: #ffffff; /* White text color */
+    border: 1px solid #718096; /* Gray border color */
+}
+
+.custom-gray-button:hover {
+    background-color: #576b7d; /* Darker gray on hover */
+}
+
+/* Dark mode styles for all colors */
+.dark .custom-blue-button,
+.dark .custom-green-button,
+.dark .custom-red-button,
+.dark .custom-yellow-button,
+.dark .custom-purple-button,
+.dark .custom-teal-button,
+.dark .custom-orange-button,
+.dark .custom-pink-button,
+.dark .custom-gray-button {
+    color: #333333; /* Dark mode text color */
+}
+
+.dark .custom-blue-button:hover,
+.dark .custom-green-button:hover,
+.dark .custom-red-button:hover,
+.dark .custom-yellow-button:hover,
+.dark .custom-purple-button:hover,
+.dark .custom-teal-button:hover,
+.dark .custom-orange-button:hover,
+.dark .custom-pink-button:hover,
+.dark .custom-gray-button:hover {
+    background-color: #7aa7f2; /* Dark mode darker color on hover */
+}
