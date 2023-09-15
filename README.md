@@ -4,6 +4,7 @@ some ideas for this project:
 - voice training tool (and tracker)
 - hrt tracker
 - support forum
+- discord bot
 
 ## License
 
