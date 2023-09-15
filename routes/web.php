@@ -25,6 +25,18 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/voice', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('voice');
+
+Route::get('/community', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('community');
+
+Route::get('/progress', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('progress');
+
 Route::get('/admin', function () {
     return view('admin');
 })->middleware(['auth'])->name('admin');
