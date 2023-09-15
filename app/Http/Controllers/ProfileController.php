@@ -45,7 +45,7 @@ class ProfileController extends Controller
                     // Check if the input contains any forbidden words
                     foreach ($forbiddenWordsArray as $word) {
                         if (stripos($value, trim($word)) !== false) {
-                            $fail("The $attribute field contains a forbidden word.");
+                            $fail("The display name contains a forbidden word.");
                         }
                     }
                 },
