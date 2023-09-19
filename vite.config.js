@@ -9,7 +9,6 @@ export default defineConfig({
                 'resources/js/app.js',
                 'public/js/voice.js',
                 'public/js/audioProcessor.js',
-
             ],
             refresh: true,
         }),

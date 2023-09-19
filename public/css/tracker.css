@@ -1,0 +1,149 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.timeline-container {
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    min-height: 100px;
+}
+
+.timeline-line {
+    top: 20%;
+    position: absolute;
+    left: 20px; /* half of start-end width */
+    right: 20px; /* half of start-end width */
+    height: 2px;
+    background: #F5A9B8;
+    z-index: 0;
+}
+
+.timeline-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px; /* spacing between events */
+    z-index: 1; /* make sure the event circles are above the timeline line */
+}
+
+.event-date {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.event-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Circle size */
+    height: 40px;
+    border-radius: 50%;
+    background: #f08097;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.event-dot:hover {
+    background: #F5A9B8;
+}
+
+.event-description {
+    margin-top: 10px;
+}
+
+/* Datepicker Container */
+.datepicker-container {
+    background-color: #374151; /* white */
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute; /* To position it relative to the input */
+}
+
+.datepicker-container:last-child {
+    justify-content: flex-start;
+}
+
+/* Individual Day */
+.datepicker-day {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.datepicker-day:hover {
+    background-color: #49566c; /* light gray background on hover */
+}
+
+/* Selected Day (Optional, if you want to highlight it later on) */
+.datepicker-day.selected {
+    background-color: #f08097; /* your pink color */
+    color: #ffffff; /* white text */
+}
+
+/* Month-Year Display */
+.month-year-display {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.datepicker-btn {
+    background-color: #f08097; /* your pink color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: auto;
+    flex-grow: 1;
+}
+
+.datepicker-btn-gray {
+    background-color: gray; /* your pink color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: auto;
+    flex-grow: 1;
+}
+
+.datepicker-btn:hover {
+    background-color: #e66787; /* a slightly darker shade of your pink */
+}
+
+.datepicker-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+
