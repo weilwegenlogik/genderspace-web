@@ -35,14 +35,23 @@ Route::prefix('voice')->group(function () {
     })->name('voice.training.words');
 });
 
+Route::prefix('progress')->group(function () {
+    Route::get('/overview', function () {
+        return view('progress.progress');
+    })->name('progress');
+
+    Route::get('/hrt-tracker', function () {
+        return view('progress.hrttracker');
+    })->name('progress.hrttracker');
+
+    Route::get('/bloodtests', function () {
+        return view('progress.bloodtests');
+    })->name('progress.bloodtests');
+});
 
 Route::get('/community', function () {
     return view('community');
 })->middleware(['auth'])->name('community');
-
-Route::get('/progress', function () {
-    return view('progress');
-})->middleware(['auth'])->name('progress');
 
 Route::get('/bot', function () {
     return view('bot');
