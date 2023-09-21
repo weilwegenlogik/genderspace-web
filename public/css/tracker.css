@@ -62,10 +62,11 @@
 .datepicker-container {
     background-color: #374151; /* white */
     color: white;
-    border-radius: 4px;
     padding: 10px;
+    border-radius: 0.5rem;
     width: 200px;
     display: flex;
+    border: 1px solid rgb(75 85 99);
     flex-wrap: wrap;
     justify-content: space-between;
     position: absolute; /* To position it relative to the input */
@@ -110,8 +111,8 @@
 .datepicker-btn {
     background-color: #f08097; /* your pink color */
     color: white;
-    border: none;
-    border-radius: 4px;
+    border: 1px solid rgb(75 85 99);
+    border-radius: 0.5rem;
     padding: 5px 15px;
     margin: 5px;
     cursor: pointer;
@@ -125,7 +126,7 @@
     background-color: gray; /* your pink color */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.5rem;
     padding: 5px 15px;
     margin: 5px;
     cursor: pointer;
@@ -144,6 +145,101 @@
     justify-content: space-between;
     padding: 5px;
     margin-top: 10px;
+}
+
+/* Dropdowns */
+.month-dropdown, .year-dropdown {
+    background-color: #f08097; /* your pink color */
+    color: white;
+    border: 1px solid rgb(75 85 99);
+    border-radius: 0.5rem;
+    padding: 5px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: auto;
+    font-weight: 400;
+}
+
+.month-dropdown:hover, .year-dropdown:hover {
+    background-color: #e66787; /* a slightly darker shade of your pink */
+}
+
+/* Remove default dropdown arrow for Chrome and Safari */
+#month-dropdown, #year-dropdown {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none; /* Remove any default background */
+    padding-right: 10px; /* Provide padding so text doesn't overlap with the container's edge */
+    border: 1px solid rgb(75 85 99);
+}
+
+/* Remove default dropdown arrow for Firefox */
+#month-dropdown::-moz-focus-inner, #year-dropdown::-moz-focus-inner {
+    border: 1px solid rgb(75 85 99);
+}
+
+#month-dropdown:-moz-focusring, #year-dropdown:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000; /* Set a text shadow to keep the text visible */
+}
+
+.icon-container {
+    height: auto;
+    max-height: calc(4 * (icon height + margin/padding)); /* Replace 'icon height + margin/padding' with the actual combined height of one icon and its spacing */
+    overflow-y: auto;
+    border: 1px solid rgb(75 85 99);
+    border-radius: 0.5rem;
+}
+
+/* Styling for the scrollbar */
+.icon-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.icon-container::-webkit-scrollbar-thumb {
+    background-color: rgb(75 85 99);
+    border-radius: 4px;
+}
+
+.icon-container::-webkit-scrollbar-track {
+    background-color: #374151;
+}
+
+.icons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    align-content: center; /* Center the items vertically */
+    max-height: 150px; 
+    overflow-y: auto;
+}
+
+.material-symbols-rounded-iconpicker {
+    font-family: 'Material Symbols Rounded', sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(75, 85, 99);
+    cursor: pointer;
+    margin: 5px; /* Add some margin to space them out */
+}
+
+/* Reset positioning and z-index */
+#iconSearch, .icons-grid {
+    position: relative;
+    z-index: auto;
+}
+
+/* Add some margin to the search input for extra space */
+#iconSearch {
+    margin-bottom: 20px;
 }
 
 
