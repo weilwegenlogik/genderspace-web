@@ -19,7 +19,11 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       
+      
     # Caching Composer dependencies
+    - name: Install SQLite PDO extension
+      run: sudo apt-get install php8.2-sqlite
+
     - name: Cache Composer dependencies
       uses: actions/cache@v3
       with:
