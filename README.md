@@ -61,82 +61,82 @@ Ensure you have the following installed:
 - SQLite
 - Git
 
-\```bash
+```bash
 sudo apt update
 sudo apt install php8.2 php8.2-sqlite3 composer nodejs npm sqlite3 git
-\```
+```
 
 ### Clone the Repository:
 
-\```bash
+```bash
 git clone https://github.com/weilwegenlogik/genderspace-web.git
 cd genderspace-web
-\```
+```
 
 ### Setup PHP & Composer:
 
 Copy the environment configuration file:
 
-\```bash
+```bash
 cp .env.sqlite.ghactions .env
-\```
+```
 
 Install PHP dependencies:
 
-\```bash
+```bash
 composer install
-\```
+```
 
 Generate an application key:
 
-\```bash
+```bash
 php artisan key:generate
-\```
+```
 
 ### Database Setup:
 
 Create a SQLite database:
 
-\```bash
+```bash
 mkdir -p database
 touch database/database.sqlite
-\```
+```
 
 Migrate the database:
 
-\```bash
+```bash
 php artisan migrate --force
-\```
+```
 
 ### Setup Node.js & npm:
 
 Install the Node.js dependencies:
 
-\```bash
+```bash
 npm install
-\```
+```
 
 Compile the assets:
 
-\```bash
+```bash
 npm run build
-\```
+```
 
 ### Directory Permissions:
 
 Ensure that the `storage` and `bootstrap/cache` directories are writable:
 
-\```bash
+```bash
 chmod -R 777 storage bootstrap/cache
-\```
+```
 
 ### Running the Application:
 
 You can use Laravel's built-in server to run the application:
 
-\```bash
+```bash
 php artisan serve
-\```
+```
 
 Visit `http://127.0.0.1:8000` in your browser to see the running application.
 
@@ -146,7 +146,7 @@ Visit `http://127.0.0.1:8000` in your browser to see the running application.
   
 - Ensure you have the `doctrine/dbal` package installed for certain database operations:
 
-\```bash
+```bash
 composer require doctrine/dbal
-\```
+```
 
