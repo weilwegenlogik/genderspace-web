@@ -19,7 +19,6 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.sqlite.ghactions', '.env');"
       
-      
     # Caching Composer dependencies
     - name: Install SQLite PDO extension
       run: sudo apt-get install php8.2-sqlite
@@ -64,5 +63,9 @@ jobs:
     - name: Clear Config Cache
       run: php artisan config:clear
 
-
-
+    # Deploying to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
