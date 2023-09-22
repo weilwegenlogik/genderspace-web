@@ -60,7 +60,7 @@ jobs:
     - name: Install Node.js Dependencies
       run: npm install
     - name: Compile assets
-      run: npm run dev
+      run: npm run build
     - name: Clear Config Cache
       run: php artisan config:clear
 
