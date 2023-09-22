@@ -78,7 +78,7 @@ cd genderspace-web
 Copy the environment configuration file:
 
 ```bash
-cp .env.sqlite.ghactions .env
+cp .env.example .env
 ```
 
 Install PHP dependencies:
