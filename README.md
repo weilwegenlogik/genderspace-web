@@ -47,3 +47,106 @@ Rest assured, data privacy is paramount. Utilizing top-tier encryption and ensur
 ## License 📜
 
 This project is under a unique license. Any modifications or distributions must have explicit written permission.
+
+## Installation (Ubuntu)
+### Setting Up `genderspace-web` on Ubuntu
+
+### Prerequisites:
+
+Ensure you have the following installed:
+- PHP (version 8.2)
+- Composer
+- Node.js (version 16)
+- npm
+- SQLite
+- Git
+
+\```bash
+sudo apt update
+sudo apt install php8.2 php8.2-sqlite3 composer nodejs npm sqlite3 git
+\```
+
+### Clone the Repository:
+
+\```bash
+git clone https://github.com/weilwegenlogik/genderspace-web.git
+cd genderspace-web
+\```
+
+### Setup PHP & Composer:
+
+Copy the environment configuration file:
+
+\```bash
+cp .env.sqlite.ghactions .env
+\```
+
+Install PHP dependencies:
+
+\```bash
+composer install
+\```
+
+Generate an application key:
+
+\```bash
+php artisan key:generate
+\```
+
+### Database Setup:
+
+Create a SQLite database:
+
+\```bash
+mkdir -p database
+touch database/database.sqlite
+\```
+
+Migrate the database:
+
+\```bash
+php artisan migrate --force
+\```
+
+### Setup Node.js & npm:
+
+Install the Node.js dependencies:
+
+\```bash
+npm install
+\```
+
+Compile the assets:
+
+\```bash
+npm run build
+\```
+
+### Directory Permissions:
+
+Ensure that the `storage` and `bootstrap/cache` directories are writable:
+
+\```bash
+chmod -R 777 storage bootstrap/cache
+\```
+
+### Running the Application:
+
+You can use Laravel's built-in server to run the application:
+
+\```bash
+php artisan serve
+\```
+
+Visit `http://127.0.0.1:8000` in your browser to see the running application.
+
+### Additional Notes:
+
+- If you encounter issues related to missing PHP extensions, you can install them using `apt`. For example, for the `dom` extension, you'd run `sudo apt install php8.2-xml`.
+  
+- Ensure you have the `doctrine/dbal` package installed for certain database operations:
+
+\```bash
+composer require doctrine/dbal
+\```
+
