@@ -34,7 +34,9 @@
                             <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
                                 {{ __('Add a new entry') }}
                             </h2>
-                            <hr class="mt-2 mb-4" style="border: 0.5px solid gray;">
+                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                                {{ __('Here you can add a new entry to your personal timeline. It can be of any kind.') }}
+                                <hr class="mt-2 mb-4" style="border: 0.5px solid gray;">
 
 
                             <div class="flex items-center mt-2">
@@ -57,7 +59,11 @@
                                 readonly placeholder="Please set the date." onclick="toggleDatePicker()">
                             <div id="datepicker" class="datepicker-container mt-2 hidden">
                                 <!-- Month and Year display -->
-                                <div id="datepicker-month-year" class="month-year-display"></div>
+                                <!-- Month and Year dropdowns -->
+                                <div id="datepicker-month-year" class="month-year-display">
+                                    <select id="month-dropdown" class="month-dropdown"></select>
+                                    <select id="year-dropdown" class="year-dropdown"></select>
+                                </div>
 
                                 <!-- Datepicker content will be populated here by JS -->
 
@@ -87,7 +93,16 @@
                                     </a>
                                 </div>
                             </div>
+                            <!-- Search input for icons -->
+                            <input type="text" id="iconSearch" placeholder="Search for an icon..."
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-2">
+                            <!-- Icons grid container -->
+                            <div style="color:white;" class="icons-grid mt-2">
+                                <!-- Sample icons for demonstration -->
+                                <!-- Add more icons as needed -->
+                            </div>
                         </div>
+
 
 
 
@@ -146,4 +161,5 @@
     </div>
 
     <script src="{{ asset('js/datepicker.js') }}"></script>
+    <script src="{{ asset('js/icon-browser.js') }}"></script>
 </x-app-layout>
